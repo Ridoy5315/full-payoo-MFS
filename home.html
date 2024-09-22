@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payoo recap</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <main class="flex justify-center">
+      <div class="mockup-phone">
+        <div class="camera"></div>
+        <div class="display">
+          <div class="artboard artboard-demo phone-3">
+            <!-- Stat -->
+            <div class="stats shadow">
+              <div class="stat">
+                <div class="stat-title">Account balance</div>
+                <div id="account-balance" class="stat-value">9400</div>
+              </div>
+            </div>
+            <div class="divider"></div>
+            <!-- feature -->
+
+            <button id="add-money-button" class="btn btn-lg">Add Money</button>
+            <button id="cash-out-button" class="btn btn-lg">Cash Out</button>
+            <button id="transaction-button" class="btn btn-lg">Transactions</button>
+            <div class="divider"></div>
+
+            <!-- add money form start -->
+            <div id="add-money-form" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+              <form class="card-body">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Add Money Amount</span>
+                  </label>
+                  <input
+                    id="add-money-input"
+                    type="email"
+                    placeholder="Amount"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">PIN No.</span>
+                  </label>
+                  <input
+                    id="pin-no-input"
+                    type="password"
+                    placeholder="PIN number"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control mt-6">
+                  <button id="add-money-btn" class="btn btn-primary">
+                    Add Money
+                  </button>
+                </div>
+              </form>
+            </div>
+            <!-- add money form end -->
+            <!-- cash out form end -->
+            <div id="cash-out-form" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+              <form class="card-body">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Cash Out Amount</span>
+                  </label>
+                  <input
+                    id="cash-out-money-input"
+                    type="email"
+                    placeholder="Amount"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">PIN No.</span>
+                  </label>
+                  <input
+                    id="pin-no-cash-out"
+                    type="password"
+                    placeholder="PIN number"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control mt-6">
+                  <button id="cash-out-money-btn" class="btn btn-primary">
+                    Cash Out
+                  </button>
+                </div>
+              </form>
+            </div>
+            <!-- cash out form end -->
+
+            <!-- transactions start -->
+             <div id="transaction-section" class="hidden">
+              <h2 class="text-3xl">Transaction History</h2>
+
+              <!-- Transaction container -->
+               <div id="transaction-container" class="space-y-2">
+
+               </div>
+             </div>
+            <!-- transactions End -->
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./js/utilities.js"></script>
+    <script src="./js/addMoney.js"></script>
+    <script src="./js/cashOut.js"></script>
+    <script src="./js/features.js"></script>
+  </body>
+</html>
